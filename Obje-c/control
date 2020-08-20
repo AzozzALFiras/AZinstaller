@@ -1,0 +1,10 @@
+Package: co.azozzalfiras.azinstaller
+Architecture: iphoneos-arm
+Version: 1.4
+Section: Tweaks
+Maintainer: Azozz ALFiras
+Depends: mobilesubstrate, co.azozzalfiras.azflibrary
+Description: Add more features to Social Media apps.
+Name: azinstaller
+Author: Azozz ALFiras
+Icon: https://afsocial.azozzalfiras.co/icon.png
