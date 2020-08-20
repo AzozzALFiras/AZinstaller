@@ -1,5 +1,6 @@
 <?php
-// for get URL ffrom App
+// for get URL from App
+// pls create folder "plist" 
 $url = $_GET['URL'];
 if($url){
 $rand = 'q1w2e3r4t5y6u7i7o8p9asdf7g5h7j8k7l5z4x6cv8b8n9m';
@@ -75,15 +76,22 @@ $pathinstall = "location"."/plist/$rand2".".plist";
 $action ="itms-services://?action=download-manifest&url=";
 
 $goplist= "$action$pathinstall";
+
 // if chanage Status to NO or other will stopped 
-$classOutput = array(
+
+if($goplist){
+$AZinstallerJson = array(
 'Status' => "Yes",
 'Version' => "1.0",
 'azfURL'=> $goplist
 );
-echo json_encode($classOutput, JSON_PRETTY_PRINT);
+echo json_encode($AZinstallerJson, JSON_PRETTY_PRINT);
 
-
+} else {
+'Status' => "Yes"
+);
+echo json_encode($AZinstallerJson, JSON_PRETTY_PRINT);
+}
 
 die();
 
